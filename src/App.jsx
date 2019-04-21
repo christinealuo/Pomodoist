@@ -104,12 +104,8 @@ class App extends React.Component {
       itemIdRunning,
       areItemsMarkedAsCompleted,
     } = this.state;
-    const a = (items.length == 0);
     return (
-      {a ? (
-        <EmptyState />
-      ) : (
-        <div className="flex-wrapper">
+      <div className="flex-wrapper">
         <div className="container">
           <header>
             <h1 className="heading">Today</h1>
@@ -135,8 +131,7 @@ class App extends React.Component {
         <footer>
           <TodoInput addItem={this.addItem} />
         </footer>
-        </div>
-      )}
+      </div>
     );
   }
 }
